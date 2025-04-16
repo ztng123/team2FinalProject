@@ -46,17 +46,36 @@ class BrakeCalcUI(QWidget):
     def init_ui(self):
         layout = QVBoxLayout()
 
+        self.road_combo = QComboBox()
+        self.road_combo.addItems(
+            [
+                "흙길",
+                "자갈길",
+                "콘크리트",
+                "아스팔트",
+                "눈길",
+                "빙판길",
+                "공항 활주로",
+                "고속도로",
+                "시골도로",
+                "도시 도로",
+                "산악 도로",
+                "터널 내부",
+            ]
+        )
         # 여러 라벨 중 한가지를 선택 할 수 있는 Box 생성
         self.env_combo = QComboBox()
         # .addItems([])를 통해 선택 종류 작성
         self.env_combo.addItems(
-            ["건조", "습윤", "결빙", "눈길"]
+            ["건조", "습윤", "고무 퇴적", "고무 제거"]
         )  # 선택할 수 있는 종류들
 
         self.slope_input = QLineEdit()
         self.speed_input = QLineEdit()
         self.weight_input = QLineEdit()
 
+        layout.addWidget(QLabel("도로조건:"))
+        layout.addWidget(self.road_combo)
         layout.addWidget(QLabel("환경조건:"))  # QLabel() 통해 라벨 이름 작성
         layout.addWidget(self.env_combo)  # 환경조건 선택
         layout.addWidget(QLabel("경사도 (%):"))

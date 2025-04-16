@@ -10,6 +10,21 @@ from PyQt5.QtWidgets import (
 )
 import sys
 import math
+import joblib
+import numpy as np
+
+model = joblib.load("frictionl.pkl")
+road_encoder = joblib.load("road.pkl")
+cond_encoder = joblib.load("cond.pkl")
+
+
+def predict_mu(road, cond, slope, speed, weight):
+    road_encoded = road_encoder.transform([road])[0]
+    cond_encoded = cond_encoder.transform([cond])[0]
+
+    X_input = np.array([[road_encoded, cond_encoded, slope, speed, weight]])
+    mu = model.predict(X_input)[0]
+    return round(mu, 4)
 
 
 # 위에서 정의한 함수들을 import했다고 가정
@@ -45,7 +60,6 @@ class BrakeCalcUI(QWidget):
 
     def init_ui(self):
         layout = QVBoxLayout()
-
         self.road_combo = QComboBox()
         self.road_combo.addItems(
             [
@@ -67,15 +81,13 @@ class BrakeCalcUI(QWidget):
         self.env_combo = QComboBox()
         # .addItems([])를 통해 선택 종류 작성
         self.env_combo.addItems(
-            ["건조", "습윤", "고무 퇴적", "고무 제거"]
+            ["건조", "습윤", "결빙", "눈길"]
         )  # 선택할 수 있는 종류들
 
         self.slope_input = QLineEdit()
         self.speed_input = QLineEdit()
         self.weight_input = QLineEdit()
 
-        layout.addWidget(QLabel("도로조건:"))
-        layout.addWidget(self.road_combo)
         layout.addWidget(QLabel("환경조건:"))  # QLabel() 통해 라벨 이름 작성
         layout.addWidget(self.env_combo)  # 환경조건 선택
         layout.addWidget(QLabel("경사도 (%):"))
@@ -102,17 +114,18 @@ class BrakeCalcUI(QWidget):
         except ValueError:
             QMessageBox.warning(self, "입력 오류", "숫자를 제대로 입력해주세요.")
             return
-
-        condition = (
+        condition1 = self.road_combo.currentText()
+        condition2 = (
             self.env_combo.currentText()
         )  # UI(.env_combo) 에서 선택한 Text 받아옴
+        mu = predict_mu(condition1, condition2, slope, speed, weight)
         mu = get_friction_coefficient(
             condition
         )  # 그 Text 를 get_friction_coefficient()에 대입
         distance, time = compute_braking(slope, speed, mu)  # compute_braking() 계산
 
         self.result_label.setText(
-            f"제동거리: {distance} m, 제동시간: {time} s"
+            f"제동거리: {distance} m, 제동시간: {time} s, 마찰계수: {mu}"
         )  # 계산한 결과 UI에 표시
 
 

@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+<RCC>
+    <qresource prefix="/">
+        <file>Main.qml</file>
+        <file>location.png</file>
+    </qresource>
+</RCC>

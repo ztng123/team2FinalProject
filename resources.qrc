@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/warning.png</file>
+        <file>images/car_marker.png</file>
+        <file>qml/map.qml</file>
+        <file>qml/RoadSegment.qml</file>
+        <file>images/Updated_Speed_Data__With_Emergency_Cases_.csv</file>
+    </qresource>
+</RCC>

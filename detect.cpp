@@ -117,7 +117,10 @@ int main()
 
     const int FRAME_THRESHOLD = 30; // 1초 기준 (30fps 기준)
     int frameCount = 0;
+    int openCount = 0;
     const double EAR_THRESHOLD = 0.25;
+    int warningLevel = 0;
+    bool already_logged = false;
 
     // MySQL 연결 초기화
     MYSQL* conn = mysql_init(nullptr);
@@ -181,25 +184,31 @@ int main()
             result += (r_pred == 1 ? "open" : "close");
             std::cout << result << std::endl;
 
-            if (l_pred == 0 && r_pred == 0)
+            if(l_pred == 0 && r_pred == 0)
             {
                 frameCount++;
+                openCount = 0;
+            }
+            else if (l_pred == 1 && r_pred == 1)
+            {
+                openCount++;
+                if (openCount >= 5)
+                {
+                    frameCount = 0;
+                    already_logged = false;
+                }
             }
             else
             {
-                if (frameCount > 0 && frameCount < 30)
-                { // 1초 미만 눈뜨기
-                    continue;
-                }
-                else
-                {
-                    frameCount = 0;
-                }
+                // 한쪽만 떠 있는 애매한 경우 → 감은 시간 유지, 뜬 시간 초기화
+                openCount = 0;
             }
+
+            cout << frameCount++ << endl;
 
             // 출력
             cv::putText(frame, result, Point(face.left(), face.top() - 10), FONT_HERSHEY_SIMPLEX, 1.2, Scalar(0, 255, 0), 3);
-            if (frameCount >= FRAME_THRESHOLD)
+            if (frameCount >= FRAME_THRESHOLD && !already_logged)
             {
                 cout << "졸음 운전 감지됨!" << endl;
 
@@ -227,8 +236,7 @@ int main()
                 {
                     cout << "DB 저장 완료\n";
                 }
-                if (warningLevel == 2)
-                    frameCount = 0; // 중복 감지 방지
+                already_logged = true;
             }
         }
 
@@ -243,3 +251,49 @@ int main()
     mysql_close(conn);
     return 0;
 }
+
+
+//#include <chrono>
+//
+//using namespace std;
+//using namespace cv;
+//using namespace std::chrono;
+//
+//int main() {
+//    VideoCapture cap(0);
+//    if (!cap.isOpened()) {
+//        cerr << "❌ 카메라 열기 실패" << endl;
+//        return -1;
+//    }
+//
+//    Mat frame;
+//    auto start_time = steady_clock::now();
+//    int frame_count = 0;
+//    int fps = 0;
+//
+//    while (true) {
+//        cap >> frame;
+//        if (frame.empty()) break;
+//
+//        // FPS 계산
+//        frame_count++;
+//        auto now = steady_clock::now();
+//        auto elapsed = duration_cast<seconds>(now - start_time).count();
+//        if (elapsed >= 1) {
+//            fps = frame_count;
+//            frame_count = 0;
+//            start_time = now;
+//        }
+//
+//        // FPS 텍스트 출력
+//        string fps_text = "FPS: " + to_string(fps);
+//        putText(frame, fps_text, Point(10, 30), FONT_HERSHEY_SIMPLEX, 0.8, Scalar(0, 255, 0), 2);
+//
+//        imshow("Webcam FPS Test", frame);
+//        if (waitKey(1) == 'q') break;
+//    }
+//
+//    cap.release();
+//    destroyAllWindows();
+//    return 0;
+//}

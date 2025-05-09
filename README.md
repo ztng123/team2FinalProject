@@ -18,6 +18,27 @@ RC Car에 아두오니와 센서 웹캠을 연결해서 운전 중 발생할 수
 |팀원|이혜린|웹 페이지(차량번호 조회, 데이터 시각, 졸음운전 구역 지도 구현, 데이터 조사)|[![GitHub](https://img.shields.io/badge/GitHub-hhhhhhyun-black?logo=github)](https://github.com/hyerin00)|
 |팀원|신예지|소프트웨어(AI 학습, OpenCV, MySQL, UI 연동), 하드웨어(Raspberry Pi)|[![GitHub](https://img.shields.io/badge/GitHub-hhhhhhyun-black?logo=github)](https://github.com/hyerin00)|
 
+# 🔧기술 스택
+- **Environment**
+
+<img src="https://img.shields.io/badge/c++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"> <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+<img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
+ <img src="https://img.shields.io/badge/jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white">
+
+- **Development**
+
+<img src="https://img.shields.io/badge/opencv-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white"> <img src="https://img.shields.io/badge/arduino-5C3EE8?style=for-the-badge&logo=arduino&logoColor=white">
+<img src="https://img.shields.io/badge/opencv-00878F?style=for-the-badge&logo=opencv&logoColor=white">
+<img src="https://img.shields.io/badge/raspberrypi-A22846?style=for-the-badge&logo=raspberrypi&logoColor=white">
+<img src="https://img.shields.io/badge/onnx-005CED?style=for-the-badge&logo=onnx&logoColor=white">
+<img src="https://img.shields.io/badge/mariadb-003545?style=for-the-badge&logo=mariadb&logoColor=white">
+<img src="https://img.shields.io/badge/mysql-003B57?style=for-the-badge&logo=mysql&logoColor=white">
+
+- **Communication**
+
+<img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white"> <img src="https://img.shields.io/badge/Kakaotalk-FFCD00?style=for-the-badge&logo=kakaotalk&logoColor=white"> <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"> <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white">
+
 # ☁시현
 
 

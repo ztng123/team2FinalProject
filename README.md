@@ -39,8 +39,12 @@ RC Car에 아두오니와 센서 웹캠을 연결해서 운전 중 발생할 수
 
 <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white"> <img src="https://img.shields.io/badge/Kakaotalk-FFCD00?style=for-the-badge&logo=kakaotalk&logoColor=white"> <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"> <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white">
 
-# 
+# Flow Chart
 ![image](https://github.com/user-attachments/assets/c40e1aed-893c-4555-a3af-6d7161cf2b55)
+
+# Architecture
+![image](https://github.com/user-attachments/assets/c7edd012-31dd-4382-ae6c-ddf6c369ac59)
+
 
 # ☁시현
 

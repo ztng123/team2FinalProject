@@ -43,7 +43,8 @@ RC Car에 아두오니와 센서 웹캠을 연결해서 운전 중 발생할 수
 ![image](https://github.com/user-attachments/assets/c40e1aed-893c-4555-a3af-6d7161cf2b55)
 
 # Architecture
-![image](https://github.com/user-attachments/assets/c7edd012-31dd-4382-ae6c-ddf6c369ac59)
+![붕붕팀_최종프로젝트-008](https://github.com/user-attachments/assets/01c0238b-b310-4f59-998a-c3fa8fd3d2e3)
+
 
 
 # ☁시현

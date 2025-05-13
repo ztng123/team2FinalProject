@@ -29,7 +29,7 @@ RC Car에 아두오니와 센서 웹캠을 연결해서 운전 중 발생할 수
 
 <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white"> <img src="https://img.shields.io/badge/Kakaotalk-FFCD00?style=for-the-badge&logo=kakaotalk&logoColor=white"> <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"> <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white">
 
-# 🔬Flow Chart
+# 🔎Flow Chart
 ![image](https://github.com/user-attachments/assets/c40e1aed-893c-4555-a3af-6d7161cf2b55)
 
 # Architecture
@@ -46,7 +46,7 @@ RC Car에 아두오니와 센서 웹캠을 연결해서 운전 중 발생할 수
 - 졸음 감지 및 부저 알림 + 객체 인식 후 브레이크
 ![시현-_2_](https://github.com/user-attachments/assets/6cf50057-3547-4a51-94cf-d017520c4083)
 
-# 회고
+# ✒️회고
 |직분|이름|회고 내용|
 |--|--|--|
 |팀장|류경미|상상하던 아이디어를 실물로 구현했을 때의 성취감이 가장 기억에 남습니다. 6개월동안 스마트 팩토리 7기 활동을 하며 배운 기술들을 종합적으로 활용해 하나의 시스템을 완성했다는 점에서 큰 뿌듯함을 느꼈습니다. 그리고 문제를 해결하면 새로운 문제가 계속 생겨 힘들었지만, 팀원들과 함께 의견을 나누고 도움을 받으며 끝까지 완성할 수 있어서 더욱 의미가 있었던 프로젝트였던 것 같습니다. 아쉬운 점은 전체 일정이 촉박하여 기능을 구현했지만 완성도가 낮아 아쉽습니다. 특히, 팀장으로서 일정 관리와 역할 분배를 더 체계적으로 하지 못한 것이 가장 아쉬움으로 남습니다. 이 프로젝트에서 그치지 않고 하드웨어 외관의 퀄리티를 높이고, 라즈베리파이 카메라 기능을 추가하여 사람 인식률을 보다 정확하게 개선하는 방향을 고민해보고 싶습니다.

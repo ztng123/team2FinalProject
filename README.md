@@ -8,20 +8,7 @@
 RC Car에 아두오니와 센서 웹캠을 연결해서 운전 중 발생할 수 있는 **두 가지 주요 위험 상황**을 **감지**하고    
 경고음이나 감속 같은 물리적인 반응과 함께 UI에서 경고 문구를 띄워주는 운전자 보조 시스템 구현이 목표 입니다.
 
-#목차
-
-
-
-# 👥 팀원 소개
-|직분|이름|업무|Git 주소|
-|--|--|--|--|
-|팀장|류경미|하드웨어(RC카 제작, Arduino Uno), PPT, 발표|[![GitHub](https://img.shields.io/badge/GitHub-BunnyByee-black?logo=github)](https://github.com/ggmmi1)|
-|팀원|김성규|UI(지도구현, 시뮬레이션, 문구 팝업, TTS)|[![GitHub](https://img.shields.io/badge/GitHub-hhhhhhyun-black?logo=github)](https://github.com/Seonggyu-art)|
-|팀원|노수현|소프트웨어(AI 학습, OpenCV, MySQL) PPT 보조, README 작성|[![GitHub](https://img.shields.io/badge/GitHub-hhhhhhyun-black?logo=github)](https://github.com/hhhhhhyun)|
-|팀원|이혜린|웹 페이지(차량번호 조회, 데이터 시각, 졸음운전 구역 지도 구현, 데이터 조사)|[![GitHub](https://img.shields.io/badge/GitHub-hhhhhhyun-black?logo=github)](https://github.com/hyerin00)|
-|팀원|신예지|소프트웨어(AI 학습, OpenCV, MySQL, UI 연동), 하드웨어(Raspberry Pi)|[![GitHub](https://img.shields.io/badge/GitHub-hhhhhhyun-black?logo=github)](https://github.com/hyerin00)|
-
-# 🔧기술 스택
+# ⚙️기술 스택
 - **Environment**
 
 <img src="https://img.shields.io/badge/c++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"> <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
@@ -42,22 +29,22 @@ RC Car에 아두오니와 센서 웹캠을 연결해서 운전 중 발생할 수
 
 <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white"> <img src="https://img.shields.io/badge/Kakaotalk-FFCD00?style=for-the-badge&logo=kakaotalk&logoColor=white"> <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"> <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white">
 
-# Flow Chart
+# 🔬Flow Chart
 ![image](https://github.com/user-attachments/assets/c40e1aed-893c-4555-a3af-6d7161cf2b55)
 
 # Architecture
 ![붕붕팀_최종프로젝트-008](https://github.com/user-attachments/assets/01c0238b-b310-4f59-998a-c3fa8fd3d2e3)
 
-# 주요 기능
+# 🔧주요 기능
 
 - 얼굴 인식 및 눈 감김 시간 분석 (OpenCV)
 - 눈 감은 상태가 3초 이상 지속되면 경고 발생
 - LED 깜빡임 + 부저 작동 + 모터 감속 제어 (아두이노 연동)
 - 실시간 로그 기록 및 상태 표시
 
-
-
-# ☁시연 
+# ☁시현 
+- 졸음 감지 및 부저 알림 + 객체 인식 후 브레이크
+![시현-_2_](https://github.com/user-attachments/assets/6cf50057-3547-4a51-94cf-d017520c4083)
 
 # 회고
 |직분|이름|회고 내용|
@@ -68,7 +55,14 @@ RC Car에 아두오니와 센서 웹캠을 연결해서 운전 중 발생할 수
 |팀원|이혜린|지도와 히스토그램을 활용해 직관적인 UI를 구현하고, 검색 방식을 고민하며 사용자 경험에 집중할 수 있어 좋았습니다. QGIS 데이터를 활용해 지도 시각화를 구현하여 동시에 SQL 연동이 어려워 CSV 파일만 사용한 점은 아쉬웠지만, 추후 기능 확장을 통해 보완하고싶습니다.|
 |팀원|신예지|UI, 하드웨어, 센서를 하나로 연동해본 경험이 좋았지만 속도 측정이 어려워 제동 거리 계산을 못한 점은 아쉬웠습니다.추후에 휠 회전수를 활용해 속도를 구하고 제동 거리 계산해서 보완하고 싶습니다.|
 
-
+# 👥 팀원 소개
+|직분|이름|업무|Git 주소|
+|--|--|--|--|
+|팀장|류경미|하드웨어(RC카 제작, Arduino Uno), PPT, 발표|[![GitHub](https://img.shields.io/badge/GitHub-BunnyByee-black?logo=github)](https://github.com/ggmmi1)|
+|팀원|김성규|UI(지도구현, 시뮬레이션, 문구 팝업, TTS)|[![GitHub](https://img.shields.io/badge/GitHub-hhhhhhyun-black?logo=github)](https://github.com/Seonggyu-art)|
+|팀원|노수현|소프트웨어(AI 학습, OpenCV, MySQL) PPT 보조, README 작성|[![GitHub](https://img.shields.io/badge/GitHub-hhhhhhyun-black?logo=github)](https://github.com/hhhhhhyun)|
+|팀원|이혜린|웹 페이지(차량번호 조회, 데이터 시각, 졸음운전 구역 지도 구현, 데이터 조사)|[![GitHub](https://img.shields.io/badge/GitHub-hhhhhhyun-black?logo=github)](https://github.com/hyerin00)|
+|팀원|신예지|소프트웨어(AI 학습, OpenCV, MySQL, UI 연동), 하드웨어(Raspberry Pi)|[![GitHub](https://img.shields.io/badge/GitHub-hhhhhhyun-black?logo=github)](https://github.com/hyerin00)|
 
 # 💬커밋 메시지 타입 목록
 
